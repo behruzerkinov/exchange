@@ -6,7 +6,7 @@ const Currency = () => {
    const [amount, setAmount] = useState();
    const [result, setResult] = useState();
    const [fromValue, setFromValue] = useState("USD");
-   const [toValue, setToValue] = useState("UZS");
+   const [toValue, setToValue] = useState("USD");
 
    useEffect(() => {
       axios({
@@ -36,14 +36,16 @@ const Currency = () => {
             <div className="display-flex">
                <label>From</label>
                <select onChange={(e) => setFromValue(e.target.value)}>
-                  {Object.entries(finalResult).map(([key, value]) => (
+                  {Object.entries(finalResult).map(([key]) => (
                      <option key={key} value={key}>
                         {key}
                      </option>
                   ))}
                </select>
+               <label>To</label>
+
                <select onChange={(e) => setToValue(e.target.value)}>
-                  {Object.entries(finalResult).map(([key, value]) => (
+                  {Object.entries(finalResult).map(([key]) => (
                      <option key={key} value={key}>
                         {key}
                      </option>
