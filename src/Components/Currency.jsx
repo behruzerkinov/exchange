@@ -92,7 +92,9 @@ const Currency = () => {
 
                   {result && (
                      <div className="mt-6 p-6 bg-neutral-700/50 rounded-[20px] border border-neutral-600">
-                        <p className="text-purple-300 text-sm font-medium">Result</p>
+                        <p className="text-purple-300 text-sm font-medium">
+                           Result
+                        </p>
                         <div className="flex items-baseline space-x-2 mt-2">
                            <p className="text-white text-3xl font-semibold">
                               {result.toFixed(2)} {toValue}
